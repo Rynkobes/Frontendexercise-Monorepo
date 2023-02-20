@@ -1,0 +1,30 @@
+{
+    "name": "@marlow/components",
+    "version": "0.1.0",
+    "description": "A collection of reusable components for React",
+    "main": "build/index.js",
+    "module": "build/index.esm.js",
+    "typings": "dist/index.d.ts",
+    "keywords": [
+        "react",
+        "typescript",
+        "component",
+        "library"
+      ],
+    "scripts": {
+        "build": "tsc -b",
+        "clean": "rm -rf dist",
+        "prepare": "npm run clean && npm run build"
+    },
+    "devDependencies": {
+        "typescript": "^4.5.5"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.10.6",
+        "@emotion/styled": "^11.10.6",
+        "@mui/material": "^5.11.9",
+        "prop-types": "^15.8.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
