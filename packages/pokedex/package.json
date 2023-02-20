@@ -13,6 +13,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@marlow/components": "^0.1.0",
+    "@marlow/utils": "^0.1.0",
     "@mui/x-data-grid": "^5.17.24",
     "@next/font": "13.1.6",
     "@reduxjs/toolkit": "^1.9.2",
