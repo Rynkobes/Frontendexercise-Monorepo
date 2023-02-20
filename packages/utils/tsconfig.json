@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "es2017", "dom.iterable", "esnext"],
+      "module": "commonjs",
+      "declaration": true,
+      "outDir": "dist",
+      "strict": true,
+      "esModuleInterop": true
+    },
+    "include": ["lib"]
+  }
+  
