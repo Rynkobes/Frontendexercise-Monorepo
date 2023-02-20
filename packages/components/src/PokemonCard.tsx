@@ -9,6 +9,13 @@ type PokemonProps = {
     url: string
 }
 
+interface Detail {
+    ability: {
+      name: string;
+    }
+  }
+  
+
 const PokemonDetails: FC<PokemonProps> = (props) => {
     const [details, setDetails] = useState<any>([])
     const [pokemonHeight, setPokemonHeight] = useState(null)
@@ -39,7 +46,7 @@ const PokemonDetails: FC<PokemonProps> = (props) => {
             <Typography variant='h6' >Abilities</Typography>
                  <List>
                      {
-                         details.map((item, i) => (
+                         details.map((item: Detail, i: number) => (
                              <ListItem key={i}>
                                  <ListItemText primary={item.ability.name} />
                             </ListItem>
