@@ -1,0 +1,18 @@
+{
+  "name": "@marlow/utils",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "axios": "^1.3.3"
+  }
+}
