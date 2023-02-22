@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from 'react-redux'
-import { DataGrid, GridCellParams } from '@mui/x-data-grid';
+import { DataGrid, GridRowParams } from '@mui/x-data-grid';
 import { fetchPokemon, setSelectedPokemon, selectPokemon } from 'store/PokemonSlice'
 
 const PokemonGrid = () => {
@@ -12,10 +12,10 @@ const PokemonGrid = () => {
     const router = useRouter();
   
     useEffect(() => {
-      dispatch(fetchPokemon());
+      dispatch(fetchPokemon() as any);
     }, [dispatch]);
   
-    const handleRowClick = (params: GridCellParams) => {
+    const handleRowClick = (params: GridRowParams) => {
         dispatch(setSelectedPokemon(params.row));
         router.push("/pokemon/[name]", `/pokemon/${params.row.name}`);
       };
