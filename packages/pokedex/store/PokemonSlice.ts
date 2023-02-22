@@ -9,16 +9,18 @@ interface Pokemon {
   imageUrl?: string;
   height?: number;
   weight?: number;
+  results?: string[];
 }
 
 interface PokemonState {
+  [x: string]: any;
   data: Pokemon[];
-  selected: string | null;
+  selected: any;
 }
 
 const initialState: PokemonState = {
   data: [],
-  selected: null,
+  selected: null 
 };
 
 const pokemonSlice = createSlice({
@@ -40,7 +42,7 @@ export const fetchPokemon = (): AppThunk => async (dispatch) => {
 
     // use fetchApiData from utils package to make API call
     const apiUrl = `https://pokeapi.co/api/v2/pokemon`
-    const response = await fetchApiData<Pokemon[]>(apiUrl)
+    const response = await fetchApiData<any>(apiUrl)
     const pokemonList: Pokemon[] = response.results.map((pokemon: any, index: number) => ({
         id: index + 1,
             name: pokemon.name,
