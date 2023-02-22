@@ -9,7 +9,7 @@ import { ErrorComponent, PokemonDetails } from '@marlow/components';
 const PokemonPage = () => {
   const router = useRouter();
   const { name } = router.query;
-  const pokemon = useSelector((state: RootState) => state.pokemon.find(p => p.name === name));
+  const pokemon = useSelector((state: RootState) => state.pokemon.data.find((p: { name: string | string[] | undefined; }) => p.name === name));
 
   if (!pokemon) {
     return <ErrorComponent errorMessage='Pokemon not found'/>
@@ -19,7 +19,7 @@ const PokemonPage = () => {
     <>
       <PokemonDetails
         name={pokemon.name}
-        url={pokemon.imageUrl}
+        url={pokemon.imageUrl || ''}
       />
     </>
   );
