@@ -1,20 +1,23 @@
-# Use Node.js 16.x as the base image
-FROM node:16
+# Use latest Node.js as the base image
 
-# Set the working directory to /app
+FROM node:latest
+
 WORKDIR /app
 
 # Copy the package.json and package-lock.json files to /app
 COPY package*.json ./
+COPY lerna.json ./
 
 # Install the dependencies
-RUN npm install --production
+RUN npm install -g lerna && \
+    npm install
+RUN lerna bootstrap
 
 # Copy the rest of the project files to /app
 COPY . .
 
 # Build the app
-RUN npm run build
+RUN lerna run build
 
 # Start the app
-CMD ["npm", "start"]
+CMD ["lerna", "run", "start"]
