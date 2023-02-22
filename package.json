@@ -5,6 +5,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "dev": "lerna run --stream dev --scope @marlow/pokedex"
+  },
   "devDependencies": {
     "lerna": "^6.5.1"
   }
