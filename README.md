@@ -29,6 +29,7 @@ This will start the container and publish port 3000 on the container to port 300
 
 Here's an overview of the folder structure for this monorepo:
 
+```
 pokedex-monorepo/
 ├── packages/
 │   ├── components/
@@ -45,7 +46,7 @@ pokedex-monorepo/
 ├── package.json
 ├── tsconfig.json
 └── README.md
-
+```
 
 - `components`: Contains reusable UI components that are used in the `pokedex` codebase.
 - `utils`: Contains reusable utility functions that are used in the `pokedex` codebase.
