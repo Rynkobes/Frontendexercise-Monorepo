@@ -30,21 +30,21 @@ This will start the container and publish port 3000 on the container to port 300
 Here's an overview of the folder structure for this monorepo:
 
 pokedex-monorepo/
-├─packages
-├── components/
-│ ├── ...
-│ └── package.json
-├── utils/
-│ ├── ...
-│ └── package.json
-├── pokedex/
-│ ├── ...
-│ └── package.json
-├─ dockerfile
-├─ lerna.json
-├─ package.json
-├─tsconfig.json
-└─ README.md
+├── packages/
+│   ├── components/
+│   │   ├── ...
+│   │   └── package.json
+│   ├── utils/
+│   │   ├── ...
+│   │   └── package.json
+│   ├── pokedex/
+│   │   ├── ...
+│   │   └── package.json
+├── dockerfile
+├── lerna.json
+├── package.json
+├── tsconfig.json
+└── README.md
 
 
 - `components`: Contains reusable UI components that are used in the `pokedex` codebase.
